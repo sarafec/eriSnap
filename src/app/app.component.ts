@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { PhotoLoaderService } from './photoLoader.service';
 import { Photos } from './photos';
 
@@ -13,7 +13,6 @@ export class AppComponent implements OnInit {
 	public selected: Photos;
 	public index: number;
 
-
 	constructor(private photoLoaderService: PhotoLoaderService) { }
 
 	getData() {
@@ -23,6 +22,18 @@ export class AppComponent implements OnInit {
 				this.photos = photos;
 			})
 	}
+
+	@HostListener('window:keyup', ['$event'])
+	keyEvent(event: KeyboardEvent){
+		if(event.keyCode === 39){
+			this.onSelectNext(this.selected);
+		}
+
+		if(event.keyCode === 37){
+			this.onSelectPrevious(this.selected);
+		}
+	}
+
 
 	onSelect(targetPhoto: Photos): void {
 		this.selected = targetPhoto;
@@ -47,7 +58,12 @@ export class AppComponent implements OnInit {
 				this.index = index
 			}
 		})
-		this.selected = this.photos[this.index - 1];
+
+		if(this.index === 0) {
+			this.selected = this.photos[this.photos.length -1]
+		} else {
+			this.selected = this.photos[this.index - 1];		
+		}
 	}
 
 	ngOnInit() {
