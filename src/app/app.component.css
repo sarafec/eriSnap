@@ -1,0 +1,77 @@
+.header {
+  background-color: #a4143b;
+  color: #f9f3e3;
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  margin-top: -10px;
+  position: fixed;
+  background-size: cover;
+  display: inline-block;
+}
+
+.title {
+	font-size: 40px;
+	margin-top: 0px;
+}
+
+.subtitle {
+	font-size: 20px;
+	margin-top: -20px;
+	margin-bottom: 10px;
+}
+
+.photo-viewer {
+	margin-top: 100px;
+	margin-right: -10px;
+	background-color: #f8e9ca;
+	height: 400px;
+	width: 50%;
+	float: left;
+}
+
+.target-photo {
+	max-height: 100%;
+	max-width: 100%;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin: auto;
+	display: block;
+}
+
+.target-photo:focus {
+	outline-color: #a4143b;
+}
+
+.photo-content {
+	float: left;
+	display: inline-block;
+	margin-top: 120px;
+	margin-left: 20px;
+}
+
+.photo-map {
+	margin-top: 40px;
+	margin-left: 50px;
+	max-height: 400px;
+	max-width: 400px;
+	border: 1px solid white;
+}
+
+.photo-library {
+	margin-top: 20px;
+	display:inline-block;
+}
+
+.photo-entry {
+	margin: 10px 5px;
+	height: 70px;
+	width: 70px;
+	cursor: pointer;
+}
+
+.photo-entry:focus {
+	outline: 1px solid black;
+}
