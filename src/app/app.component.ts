@@ -9,7 +9,7 @@ import { Photos } from './photos';
 })
 
 export class AppComponent implements OnInit {
-	private photos:Photos[] = [];
+	public photos:Photos[] = [];
 	public selected: Photos;
 	public index: number;
 

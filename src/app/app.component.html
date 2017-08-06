@@ -2,14 +2,18 @@
   <h1 class="title">EriSnap</h1>
   <h3 class="subtitle">Black and Whites from Summer 2007</h3>
 </header>
+<div class="content-divider"></div>
 
 <div class="photo-viewer" >
-  <img *ngIf="this.selected" tabindex="0" class="target-photo"  (click)="onSelectNext(this.selected)" (keyup.enter)="onSelectNext(this.selected)" src={{this.selected.path}} alt={{this.selected.caption}}>
+	<div class="photo-container">
+	 <img *ngIf="this.selected" tabindex="0" class="target-photo"  (click)="onSelectNext(this.selected)" (keyup.enter)="onSelectNext(this.selected)" src={{this.selected.path}} alt={{this.selected.caption}}>
+	</div>
+	<div class="photo-content">
+		  <div *ngIf="this.selected" class="photo-location">Location: {{this.selected.location}}</div>
+		<img *ngIf="this.selected" class="photo-map" src={{this.selected.mapPath}} alt="">
+	</div>
+
 </div>
-<div class="photo-content">
-  <div *ngIf="this.selected" class="photo-location">Location: {{this.selected.location}}</div>
-</div>
-<img *ngIf="this.selected" class="photo-map" src={{this.selected.mapPath}} alt="">
 
 
 <div class="photo-library">
