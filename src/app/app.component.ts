@@ -25,7 +25,6 @@ export class AppComponent implements OnInit {
 	}
 
 	onSelect(targetPhoto: Photos): void {
-		console.log(targetPhoto);
 		this.selected = targetPhoto;
 	}
 
@@ -35,7 +34,11 @@ export class AppComponent implements OnInit {
 				this.index = index
 			}
 		})
-		this.selected = this.photos[this.index + 1];
+		if(this.index === this.photos.length - 1) {
+			this.selected = this.photos[0]
+		} else {
+			this.selected = this.photos[this.index + 1];
+		}
 	}
 
 	onSelectPrevious(targetPhoto: Photos): void {		
