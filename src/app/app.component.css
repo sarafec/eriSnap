@@ -45,6 +45,7 @@
 	max-height: 70vh;
 	max-width: 100%;
 	display: inline-block;
+	cursor: pointer;
 }
 
 .target-photo:focus {
