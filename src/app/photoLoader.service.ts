@@ -19,7 +19,7 @@ export class PhotoLoaderService {
 	}
 
 	private extractData(response: Response) {
-		if(response.status < 200 || response. status >= 300) {
+		if(response.status < 200 || response.status >= 300) {
 			throw new Error('Bad response status: ' + response.status);
 		}
 		let body = response;

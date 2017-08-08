@@ -1,4 +1,5 @@
 [
+	{"path": "assets/photos/family-15.jpg", "mapPath": "assets/photos/debarwa.gif", "location": "Debarwa, Eritrea", "caption": "this is a picture"},
 	{"path": "assets/photos/family-1.jpg", "mapPath": "assets/photos/debarwa.gif", "location": "Debarwa, Eritrea", "caption": "this is a picture"},
 	{"path": "assets/photos/family-2.jpg", "mapPath": "assets/photos/debarwa.gif", "location": "Debarwa, Eritrea", "caption": "this is a picture"},
 	{"path": "assets/photos/family-3.jpg", "mapPath": "assets/photos/debarwa.gif", "location": "Debarwa, Eritrea", "caption": "this is a picture"},
@@ -13,7 +14,6 @@
 	{"path": "assets/photos/family-12.jpg", "mapPath": "assets/photos/keren.gif", "location": "Keren, Eritrea", "caption": "this is a picture"},
 	{"path": "assets/photos/family-13.jpg", "mapPath": "assets/photos/asmara.gif", "location": "Asmara, Eritrea", "caption": "this is a picture"},
 	{"path": "assets/photos/family-14.jpg", "mapPath": "assets/photos/asmara.gif", "location": "Asmara, Eritrea", "caption": "this is a picture"},
-	{"path": "assets/photos/family-15.jpg", "mapPath": "assets/photos/debarwa.gif", "location": "Debarwa, Eritrea", "caption": "this is a picture"},
 	{"path": "assets/photos/family-16.jpg", "mapPath": "assets/photos/debarwa.gif", "location": "Debarwa, Eritrea", "caption": "this is a picture"},
 	{"path": "assets/photos/family-17.jpg", "mapPath": "assets/photos/keren.gif", "location": "Keren, Eritrea", "caption": "this is a picture"},
 	{"path": "assets/photos/family-18.jpg", "mapPath": "assets/photos/debarwa.gif", "location": "Debarwa, Eritrea", "caption": "this is a picture"},
