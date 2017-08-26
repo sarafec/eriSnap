@@ -34,6 +34,35 @@ export class AppComponent implements OnInit {
 		}
 	}
 
+	touch1 = {x: 0, y: 0, time: 0 };
+
+	@HostListener('window:touchstart', ['$event'])
+	@HostListener('window:touchend', ['$event'])
+	@HostListener('window:touchCancel', ['$event'])
+	handleTouch(evt){
+	    var touch = evt.touches[0] || evt.changedTouches[0];
+	    if (evt.type === 'touchstart'){
+	      this.touch1.x = touch.pageX;
+	      this.touch1.y = touch.pageY;
+	      this.touch1.time = evt.timeStamp;
+	    } else if (evt.type === 'touchend'){
+	      var dx = touch.pageX - this.touch1.x;
+	      var dy = touch.pageY - this.touch1.y;
+	      var dt = evt.timeStamp - this.touch1.time;
+
+	      if (dt < 500){
+	        if (Math.abs(dx) > 60){
+	          if (dx > 0){
+					this.onSelectNext(this.selected);
+	          } else {
+					this.onSelectPrevious(this.selected);
+	          }
+	        }
+	      }
+	    } 
+	  }
+
+
 
 	onSelect(targetPhoto: Photos): void {
 		this.selected = targetPhoto;
